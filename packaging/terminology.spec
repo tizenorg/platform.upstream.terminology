@@ -6,6 +6,20 @@ Summary:        Terminal Program
 Url:            http://www.enlightenment.org/
 Group:          Graphics/X11
 Source0:        %{name}-%{version}.tar.bz2
+
+BuildRequires: pkgconfig(elementary)
+BuildRequires: pkgconfig(eina)
+BuildRequires: pkgconfig(eet)
+BuildRequires: pkgconfig(evas)
+BuildRequires: pkgconfig(ecore)
+BuildRequires: pkgconfig(edje)
+BuildRequires: pkgconfig(emotion)
+BuildRequires: pkgconfig(ecore-input)
+BuildRequires: pkgconfig(ecore-imf)
+BuildRequires: pkgconfig(ecore-imf-evas)
+BuildRequires: pkgconfig(efreet)
+
+
 %description
 Terminilogy Terminal program.
 %prep
