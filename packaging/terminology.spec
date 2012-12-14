@@ -7,28 +7,27 @@ Url:            http://www.enlightenment.org/
 Group:          Graphics/X11
 Source0:        %{name}-%{version}.tar.bz2
 
-BuildRequires: pkgconfig(elementary)
-BuildRequires: pkgconfig(eina)
-BuildRequires: pkgconfig(eet)
-BuildRequires: pkgconfig(evas)
-BuildRequires: pkgconfig(ecore)
-BuildRequires: pkgconfig(edje)
-BuildRequires: pkgconfig(emotion)
-BuildRequires: pkgconfig(ecore-input)
-BuildRequires: pkgconfig(ecore-imf)
-BuildRequires: pkgconfig(ecore-imf-evas)
-BuildRequires: pkgconfig(efreet)
-
+BuildRequires:  pkgconfig(ecore)
+BuildRequires:  pkgconfig(ecore-imf)
+BuildRequires:  pkgconfig(ecore-imf-evas)
+BuildRequires:  pkgconfig(ecore-input)
+BuildRequires:  pkgconfig(edje)
+BuildRequires:  pkgconfig(eet)
+BuildRequires:  pkgconfig(efreet)
+BuildRequires:  pkgconfig(eina)
+BuildRequires:  pkgconfig(elementary)
+BuildRequires:  pkgconfig(emotion)
+BuildRequires:  pkgconfig(evas)
 
 %description
 Terminilogy Terminal program.
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 
 %build
 %autogen
-%configure 
+%configure
 make %{?_smp_mflags}
 
 %install
@@ -37,3 +36,7 @@ make %{?_smp_mflags}
 %files
 %defattr(-,root,root,-)
 %license COPYING
+/usr/bin/terminology
+/usr/share/applications/terminology.desktop
+/usr/share/icons/terminology.png
+/usr/share/terminology/fonts/10x20.pcf
