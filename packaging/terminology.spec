@@ -40,3 +40,4 @@ make %{?_smp_mflags}
 /usr/share/applications/terminology.desktop
 /usr/share/icons/terminology.png
 /usr/share/terminology/fonts
+/usr/share/terminology
