@@ -1,4 +1,4 @@
-Name:           terminilogy
+Name:           terminology
 Version:        0.1
 Release:        1
 License:        BSD 2-clause
