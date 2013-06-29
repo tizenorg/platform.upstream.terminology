@@ -6,6 +6,7 @@ Summary:        Terminal Program
 Url:            http://www.enlightenment.org/
 Group:          Graphics/X11
 Source0:        %{name}-%{version}.tar.bz2
+Source1001: 	terminology.manifest
 
 BuildRequires:  pkgconfig(ecore)
 BuildRequires:  pkgconfig(ecore-imf)
@@ -23,6 +24,7 @@ BuildRequires:  pkgconfig(evas)
 Terminilogy Terminal program.
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 
 %build
@@ -34,6 +36,7 @@ make %{?_smp_mflags}
 %make_install
 
 %files
+%manifest %{name}.manifest
 %defattr(-,root,root,-)
 %license COPYING
 /usr/bin/terminology
